@@ -17,18 +17,18 @@ The Figure. 1 illustrates the framework of our method. We start by processing th
 ![Fig. 1: Framework](https://github.com/zhangxin1995/MTD/blob/master/images/framework.png)
 
 ## Pedestrian Trajectory Retrieval
-![Fig. 2: Examples of pedestrian video retrieval, trajectory retrieval, and trajectory re-ranking.Each image represents the first frame of a tracklet. An image with a green border indicates that its identity is the same as the query, while an image with a red border means its identity differs from the query.](https://github.com/zhangxin1995/MTD/blob/masters/images/example.png)
+![Fig. 2: Examples of pedestrian video retrieval, trajectory retrieval, and trajectory re-ranking.Each image represents the first frame of a tracklet. An image with a green border indicates that its identity is the same as the query, while an image with a red border means its identity differs from the query.](https://github.com/zhangxin1995/MTD/blob/master/images/example.png)
 Fig. 2 shows the example retreival results of video based pedestrian retrieval, trajectory based pedestrian retrieval, and pedestrian trajectory reordering. It can be seen that trajectory based retrieval results not only include extra trajectory information, but also improve retrieval accuracy.
 
 
 
 ## Mall Trajectory Dataset(MTD)
-![Table 1: The Mall Trajectory Dastaset.](https://github.com/zhangxin1995/MTD/blob/masters/images/dataset.png)
-![Fig. 2: The Mall Trajectory Dastaset.](https://github.com/zhangxin1995/MTD/blob/masters/images/camera.png)
+![Table 1: The Mall Trajectory Dastaset.](https://github.com/zhangxin1995/MTD/blob/master/images/dataset.png)
+![Fig. 2: The Mall Trajectory Dastaset.](https://github.com/zhangxin1995/MTD/blob/master/images/camera.png)
 The Mall Trajectory Dataset was collected from a tens of thousands of square feet mall, from which we sampled 11 cameras for our experiments. In the MTD dataset, it consists of 527,066 images from 3845 individuals. Of these, the training set consists of 7060 single-camera tracks from 2750 individuals and the test set consists of 3404 single-camera tracks from 1095 individuals. Table 1 shows the comparison of MTD with existing pedestrian re-identification datasets, and it can be seen that our dataset includes not only more pedestrian images and more pedestrians but also a non-acting real-scene dataset, which is useful for investigating cross-camera spatio-temporal association. Fig. 3 shows captured pictures of the corresponding cameras in the Mall Trajectory Dataset. As can be seen in Fig. 3, our new dataset scenario is more complex compared to the existing public dataset. Firstly, the environment of our dataset is an indoor environment, with numerous access routes between each camera and no maps to refer to. Secondly, our dataset includes vertical lifts and escalators, such as cameras \#1, \#2, and \#3, and the running time of lifts is usually uncertain, which brings new challenges to spatio-temporal modeling. Finally, the difference in viewpoints in the scene and the occlusion by glass doors and railings raise the difficulty of the pedestrian retrieval task for this dataset.
 
 ### Download Url
-You can download the dataset files used through `git lfs` or [Google Drive](https://drive.google.com/file/d/1nEWPjyhZccolcE634XA3cXbDdAHKvN2w/view?usp=sharing)
+You can download the dataset files used through [Google Drive](https://drive.google.com/file/d/1nEWPjyhZccolcE634XA3cXbDdAHKvN2w/view?usp=sharing)
 
 ## Quick Start
 To obtain consistent results with the experiments in the paper, please enter the following code and run it:
@@ -36,34 +36,34 @@ To obtain consistent results with the experiments in the paper, please enter the
 git clone https://github.com/zhangxin1995/MTD.git
 
 #For the Mall Trajectory Dataset, PSTA + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_mall_td.yaml
+python main.py --yaml ./config/manifold_mall_td.yaml
 
 #For the Mall Trajectory Dataset, PSTA + Gauss Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_gauss_td.yaml
+python main.py --yaml ./config/manifold_gauss_td.yaml
 
 #For the Mall Trajectory Dataset, Resnet + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_mall_td_resnet.yaml
+python main.py --yaml ./config/manifold_mall_td_resnet.yaml
 
 #For the Mall Trajectory Dataset, MGN + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_mall_td_mgn.yaml
+python main.py --yaml ./config/manifold_mall_td_mgn.yaml
 
 #For the Mall Trajectory Dataset, TransReid + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_mall_td_trans.yaml
+python main.py --yaml ./config/manifold_mall_td_trans.yaml
 
 #For the Person Trajectory Dataset, ResNet + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_ptd_resnet.yaml
+python main.py --yaml ./config/manifold_ptd_resnet.yaml
 
 #For the Person Trajectory Dataset, MGN + T-RoPE Temporal Model + Linear Trajectory Manifold
-python masters.py --yaml ./config/manifold_ptd_mgn.yaml
+python main.py --yaml ./config/manifold_ptd_mgn.yaml
 
 #For the Person Trajectory Dataset, ResNet + LocalCRF
-python masters.py --yaml ./config/local_crf_resnet.yaml
+python main.py --yaml ./config/local_crf_resnet.yaml
 
 #For the Person Group Trajectory Dataset, ResNet + LocalCRF
-python masters.py --yaml ./config/local_crf_pgtd_resnet.yaml 
+python main.py --yaml ./config/local_crf_pgtd_resnet.yaml 
 
 #For the Person Group Trajectory Dataset, ResNet + GlobalCRF
-python masters.py --yaml ./config/local_crf_pgtd_resnet.yaml 
+python main.py --yaml ./config/local_crf_pgtd_resnet.yaml 
 ```
 
 ## Citation
