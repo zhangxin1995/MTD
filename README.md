@@ -29,6 +29,8 @@ The Mall Trajectory Dataset was collected from a tens of thousands of square fee
 
 ### Download Url
 You can download the dataset files used through [Google Drive](https://drive.google.com/file/d/1nEWPjyhZccolcE634XA3cXbDdAHKvN2w/view?usp=sharing).
+You can download the model files used through [Google Drive](https://drive.google.com/file/d/13QSkNRTNhFFcUeOynpgEKr2ng9GxOQ0_/view?usp=sharing).
+
 
 ## Quick Start
 To obtain consistent results with the experiments in the paper, please enter the following code and run it:
