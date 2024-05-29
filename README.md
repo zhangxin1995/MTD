@@ -92,27 +92,4 @@ doi = {https://doi.org/10.1016/j.neucom.2024.127281},
 url = {https://www.sciencedirect.com/science/article/pii/S0925231224000523},
 author = {Xin Zhang and Xiaohua Xie and Li Wen and Jianhuang Lai}
 }
-
-'''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
