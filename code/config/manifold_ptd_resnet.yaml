@@ -1,0 +1,21 @@
+method: manifold_ptd
+dataset:
+    path: ./data/PTD/resnet50_visual_dataset.pkl 
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: manifold
+seed: 3
+dim: 2048
+cluster_threshold: 0.047
+manifold:
+  alpha: 0.029
+  eta: 1.62
+
+
+
+  

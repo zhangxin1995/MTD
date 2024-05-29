@@ -1,0 +1,24 @@
+method: clip_mall_td
+dataset:
+    path: ./data/MALL/clip_visual_data.pkl
+    train_path: ./data/MALL/vsta_visual_dataset.pkl 
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+seed: 3
+adj2path: manifold
+dim: 1280
+#BEST PTR+:
+# cluster_threshold: 0.6
+#best PTR:
+
+cluster_threshold: 0.37
+manifold:
+  # alpha: 0.3
+  alpha: 0.22
+  eta: 0.4
+  # eta: 1.11

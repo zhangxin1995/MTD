@@ -1,0 +1,26 @@
+method: manifold_mall_td
+dataset:
+    path: ./data/MALL/mgn_visual_data.pkl
+    train_path: ./data/MALL/vsta_visual_dataset.pkl 
+    # path: ./data/PTD/resnet50_visual_dataset.pkl 
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: manifold
+dim: 2048
+seed: 3
+# cluster_threshold: 0.02
+# cluster_threshold: 0.04
+# cluster_threshold: 0.06
+cluster_threshold: 0.4
+manifold:
+  # alpha: 0.13
+  # alpha: 0.15
+  # alpha: 0.17
+  # alpha: 0.19
+  eta: 3.1415
+  alpha: 0.13

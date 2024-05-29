@@ -1,0 +1,19 @@
+method: gauss_mall_td
+dataset:
+    path: ./data/MALL/vsta_visual_dataset.pkl
+    train_path: ./data/MALL/vsta_visual_dataset.pkl 
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+seed: 3
+adj2path: manifold
+dim: 2048
+cluster_threshold: 0.38
+manifold:
+  alpha: 0.34
+  # eta: 3.14
+  eta: 3

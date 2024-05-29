@@ -1,0 +1,22 @@
+method: manifold_ptd
+dataset:
+    # path: ./data/MALL/vsta_visual_dataset.pkl
+    path: ./data/PTD_GROUP/resnet50_visual_dataset.pkl 
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: manifold
+dim: 2048
+cluster_threshold: 0.029
+seed: 2
+manifold:
+  eta: 1.0
+  alpha: 0.036
+
+
+
+  
